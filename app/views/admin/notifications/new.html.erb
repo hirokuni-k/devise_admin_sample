@@ -1,0 +1,17 @@
+<h1>管理者画面 お知らせ新規投稿</h1>
+
+<!-- url の指定も必要 -->
+<!-- Rails 6.1 以降なら「local: true」は不要 -->
+<%= form_with model: @notification, url: admin_notifications_path do |form| %>
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </p>
+  <p>
+    <%= form.submit "送信" %>
+  </p>
+<% end %>
